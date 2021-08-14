@@ -3,6 +3,7 @@ package scenarios;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.BeforeClass;
+import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -18,6 +19,14 @@ public class Teste_Login {
 	public static void beforeClass() {
 		driver = setupChromeDriver();
 		driver.get("http://advantageonlineshopping.com/#/");
+	}
+	
+	@Test
+
+	public void cadastro() {
+		
+		register.InformacoesDeCadastro();
+
 	}
 
 	public static ChromeDriver setupChromeDriver() {
