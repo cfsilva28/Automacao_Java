@@ -18,14 +18,16 @@ public class Teste_Login {
 	@BeforeClass
 	public static void beforeClass() {
 		driver = setupChromeDriver();
-		driver.get("http://advantageonlineshopping.com/#/");
-	}
-	
-	@Test
 
+		driver.get("http://advantageonlineshopping.com/#/");
+
+	}
+
+	@Test
 	public void cadastro() {
-		
-		register.InformacoesDeCadastro();
+
+		register.AcessoCadastro();
+		register.InfoUser();
 
 	}
 
@@ -33,7 +35,7 @@ public class Teste_Login {
 
 		ChromeOptions chromeOptions = new ChromeOptions();
 		driver = new ChromeDriver(chromeOptions);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;
 
