@@ -29,6 +29,7 @@ public class Teste_Login {
 		register.AcessoCadastro();
 		register.Account_Details();
 		register.Personal_Details();
+		register.Adress();
 
 	}
 

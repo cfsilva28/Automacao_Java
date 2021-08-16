@@ -17,7 +17,12 @@ public class CadastroPage {
 	public final String USER_NAME_FIRST = "//*[@id=\"formCover\"]/div[2]/div[1]/sec-view[1]/div/input";
 	public final String USER_NAME_LAST = "//*[@id=\"formCover\"]/div[2]/div[1]/sec-view[2]/div/input";
 	public final String USER_NAME_PHONE = "//*[@id=\"formCover\"]/div[2]/div[2]/sec-view/div/input";
-	public final String CREATE = "//a[contains(text(),'CREATE NEW ACCOUNT')]";
+	public final String USER_COUNTRY = "//*[@id=\"formCover\"]/div[3]/div[1]/sec-view[1]/div/select";
+	public final String USER_COUNTRY_BR = "//option[contains(text(),'Brazil')]";
+	public final String USER_CITY = "//*[@id=\"formCover\"]/div[3]/div[1]/sec-view[2]/div/input";
+	public final String USER_ADRESS = "//*[@id=\"formCover\"]/div[3]/div[2]/sec-view[1]/div/input";
+	public final String USER_STATE = "//*[@id=\"formCover\"]/div[3]/div[2]/sec-view[2]/div/input";
+	public final String USER_POSTAL_CODE = "//*[@id=\"formCover\"]/div[3]/div[3]/sec-view/div/input";
 
 	public CadastroPage(WebDriver driver) {
 
@@ -54,6 +59,22 @@ public class CadastroPage {
 		driver.findElement(By.xpath(USER_NAME_LAST)).sendKeys("Silva");
 
 		driver.findElement(By.xpath(USER_NAME_PHONE)).sendKeys("011987534907");
+
+	}
+
+	public void Adress() {
+
+		driver.findElement(By.xpath(USER_COUNTRY)).click();
+
+		driver.findElement(By.xpath(USER_COUNTRY_BR)).click();
+
+		driver.findElement(By.xpath(USER_CITY)).sendKeys("Barueri");
+		
+		driver.findElement(By.xpath(USER_ADRESS)).sendKeys("Rua dos Pombos - 10");
+		
+		driver.findElement(By.xpath(USER_STATE)).sendKeys("Barueri");
+		
+		driver.findElement(By.xpath(USER_POSTAL_CODE)).sendKeys("06415-150");
 
 	}
 
